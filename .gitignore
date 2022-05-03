@@ -1,0 +1,3 @@
+# Ignore Environment Varaibles
+__pycache__
+/venv

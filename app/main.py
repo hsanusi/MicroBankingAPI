@@ -31,6 +31,7 @@ def get_customers(db: Session = Depends(get_db)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No Customer Record Found")
     return {"customers": customers}
 
+
 @app.get("/customers/{id}")
 def get_customers(id: int, db: Session = Depends(get_db)):
     customers = db.query(models.Customer).filter(models.Customer.customer_id==id).first()
